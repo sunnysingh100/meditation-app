@@ -5,6 +5,7 @@ import {StatusBar} from "expo-status-bar";
 import beachImage from "@/assets/meditation-images/beach.webp";
 import CustomButton from "@/components/CustomButton";
 import {useRouter} from "expo-router";
+import AppGradient from "@/components/AppGradient";
 export default function HomeScreen() {
   const router = useRouter();
   return (
@@ -14,11 +15,8 @@ export default function HomeScreen() {
         resizeMode="cover"
         className="flex-1"
       >
-        <LinearGradient
-          className="flex-1"
-          colors={["rgba(0,0,0,0.4)", "rgba(0,0,0,0.8)"]}
-        >
-          <SafeAreaView className="flex justify-between flex-1 mx-5 my-12">
+        <AppGradient colors={["rgba(0,0,0,0.4)", "rgba(0,0,0,0.8)"]}>
+          <SafeAreaView className="flex justify-between flex-1 px-1">
             <View>
               <Text className="text-4xl font-bold text-center text-white">
                 Simple Meditation
@@ -37,7 +35,7 @@ export default function HomeScreen() {
             </View>
             <StatusBar style="light" />
           </SafeAreaView>
-        </LinearGradient>
+        </AppGradient>
       </ImageBackground>
     </View>
   );
